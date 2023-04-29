@@ -6,16 +6,86 @@
   padding: 0 42px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
-.logo{
-    color:$font-primary;
-    font-weight: 400;
-    font-size: 24px;
+.logo {
+  display: flex;
+  color: $font-secondary;
+  font-weight: 600;
+  font-size: 24px;
+  text-decoration: none;
+  .logo-img {
+    max-height: 150px;
+    color: $primary-color;
+  }
 }
 
-.logo-img img {
+.user-img img {
   height: 50px;
   width: 50px;
-  color : $font-primary
+  border-radius: 35px;
+  border: 2px solid $font-secondary;
+  color: $font-primary;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 50%;
+}
+
+input {
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px;
+  height: 35px;
+  width: 70%;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: rgb(255, 255, 255);
+}
+button {
+  height: 35px;
+  width: 10%;
+  border: none;
+  background-color: $primary-color;
+  color: white;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+@media screen and  (min-width : 360px) and (max-width:680px) {
+    .header{
+      padding:0;
+    }
+    .logo{
+      height: 100px;
+    }
+
+    .user-img img{
+      height: 40px;
+      width: 40px;
+      margin: 10px;
+    }
+    input{
+      width: 80px;
+      height: 30px;
+      font-size: 10px;
+
+    }
+    button{
+        width: 20%;;
+    }
+    form {
+      width: 150px;
+    }
 }
